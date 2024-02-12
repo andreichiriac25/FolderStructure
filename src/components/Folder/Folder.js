@@ -12,6 +12,8 @@ const Folder = ({ folder: { name, children }, level = 1 }) => {
     setOpen((prevState) => !prevState);
   };
 
+  console.log("folder render");
+
   return (
     <div key={name} onClick={onClick} style={{ cursor: "pointer" }}>
       {children?.length ? (open ? "- " : "+ ") : ""}
